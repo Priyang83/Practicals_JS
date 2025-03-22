@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <style>
+        form{
+            display: flex;
+            flex-wrap: wrap;
+            width: 300px;
+            align-items: center;
+            justify-content: space-around;
+            margin: auto;
+            row-gap: 10px;
+        }
+        input{
+            width: 67%;
+        }
+        label{
+            width: 30%;
+        }
+        span{
+            display: block;
+            width: 100%;
+            color: red;
+        }
+        
+    </style>
+</head>
+<body>
+    <form action="#">
+        <label for="">FirstName :</label>
+        <input type="text" name="FirstName" onblur="validation(event)">
+        <span id="FirstName-error"></span>
+
+        <label for="">LastName :</label>
+        <input type="text" name="LastName" onblur="validation(event)">
+        <span id="LastName-error"></span>
+
+        <label for="">Email :</label>
+        <input type="text" name="Email" onblur="validation(event)">
+        <span id="Email-error"></span>
+
+        <label for="">Phone :</label>
+        <input type="text" name="Phone" onblur="validation(event)">
+        <span id="Phone-error"></span>
+
+        <label for="">Password :</label>
+        <input type="password" name="Password" onblur="validation(event)">
+        <span id="Password-error"></span>
+
+        <input type="submit" value="submit">
+        
+        
+    </form>
+    <script src="app.js"></script>
+</body>
+</html>
