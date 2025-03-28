@@ -17,11 +17,22 @@
         row-gap: 10px;
       }
       td button{
+        display: none;
+      }
+    tr:hover button{
+      display: inline-block;
+    }
+      td button{
         width: 25px;
-        display: block;
-        margin: auto;
+       
         border: none;
         background-color: rgba(255, 255, 255, 0);
+      }
+      .flexcontainer{
+        display: flex;
+       
+        align-items: start;
+        justify-content: center;
       }
       td button:hover{
         background-color: blue;
@@ -30,20 +41,41 @@
       td i{
         font-size: 12px;
       }
-      p{
+      /* p{
         text-align: center;
-      }
+      } */
+      th{
+      text-align: center;
+    }
     </style>
+    
 </head>
 
 <body>
   
     <div class="container">
+      <div>
+        <select name="" id="colSelect" >
+          <option value=""></option>
+        </select>
+        <select name="" id="searchSelect">
+          <option value="startsWith">startsWith</option>
+          <option value="endsWith">endsWith</option>
+        </select>
+        <input type="text" name="" id="searchVal">
+        <button onclick="dataSearch();">Search</button>
+      </div>
         <table class="table table-striped table-hover" cellspecing="180px">
-            
+          <thead >
+            <tr id="displayCol">
+              <th>Firstname</th>
+              <th>Lastname</th>
+              <th>Email</th>
+            </tr>
+          </thead>
             <tbody id="display_Data">
               <tr>
-                <td>John</td>
+                <td><div class="flexcontainer"></div>John</td>
                 <td>Doe</td>
                 <td>john@example.com</td>
               </tr>
